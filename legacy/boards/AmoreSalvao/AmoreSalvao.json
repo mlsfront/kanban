@@ -1,0 +1,39 @@
+{
+    "title": "AmoreSalvao",
+    "columns": [
+        {
+            "id": "backlog",
+            "title": "Backlog",
+            "color": "#0d6efd"
+        },
+        {
+            "id": "desenvolvimento",
+            "title": "Em Desenvolvimento",
+            "color": "#ffc107"
+        },
+        {
+            "id": "testes",
+            "title": "Testes",
+            "color": "#198754"
+        },
+        {
+            "id": "concluido",
+            "title": "Concluído",
+            "color": "#6c757d"
+        }
+    ],
+    "tasks": {
+        "backlog": [
+            {
+                "id": "task_1783682081053",
+                "text": "Footer",
+                "description": "Remover endereço e contato por e-mail",
+                "priority": "media",
+                "due_date": ""
+            }
+        ],
+        "desenvolvimento": [],
+        "testes": [],
+        "concluido": []
+    }
+}

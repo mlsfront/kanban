@@ -1,0 +1,22 @@
+# Dependências
+vendor/
+
+# Configuração local e segredos
+.env
+.env.*
+!.env.example
+
+# Logs e dados gerados em runtime
+*.log
+logs/
+debug_log.txt
+
+# Pacotes gerados
+dist/
+
+# Arquivos do sistema e do editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace

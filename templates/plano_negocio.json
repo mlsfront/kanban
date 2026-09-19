@@ -1,0 +1,61 @@
+{
+  "title": "Plano de Negócio Detalhado",
+  "columns": [
+    { "id": "estrutura", "title": "Estrutura & Resumo", "color": "#0d6efd" },
+    { "id": "analise", "title": "Análise de Mercado", "color": "#ffc107" },
+    { "id": "estrategia", "title": "Estratégia & Marketing", "color": "#198754" },
+    { "id": "financeiro", "title": "Plano Financeiro", "color": "#6c757d" }
+  ],
+  "tasks": {
+    "estrutura": [
+      { 
+        "id": "t201", 
+        "text": "Sumário Executivo",
+        "description": "Focar nos principais pontos do negócio, atratividade e diferenciais.",
+        "priority": "alta",
+        "due_date": null 
+      },
+      { 
+        "id": "t202", 
+        "text": "Descrição do Negócio (Missão/Visão/Valores)",
+        "description": "Documentar a essência da empresa e seus objetivos de longo prazo.",
+        "priority": "media",
+        "due_date": null 
+      }
+    ],
+    "analise": [
+      { 
+        "id": "t203", 
+        "text": "Identificação do Público-Alvo",
+        "description": "Criação de personas e definição demográfica.",
+        "priority": "media",
+        "due_date": null 
+      },
+      { 
+        "id": "t204", 
+        "text": "Análise de Concorrentes",
+        "description": "Levantamento de 3 concorrentes diretos e indiretos.",
+        "priority": "baixa",
+        "due_date": null 
+      }
+    ],
+    "estrategia": [
+      { 
+        "id": "t205", 
+        "text": "Plano de Marketing",
+        "description": "Definir canais de aquisição e orçamento inicial.",
+        "priority": "media",
+        "due_date": null 
+      }
+    ],
+    "financeiro": [
+      { 
+        "id": "t206", 
+        "text": "Projeção de Receitas (3 anos)",
+        "description": "Incluir cenários pessimista, realista e otimista.",
+        "priority": "alta",
+        "due_date": null 
+      }
+    ]
+  }
+}

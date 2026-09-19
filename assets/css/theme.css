@@ -1,0 +1,88 @@
+:root {
+    color-scheme: light;
+    --app-bg: #f4f5f7;
+    --app-surface: #ffffff;
+    --app-text: #212529;
+    --app-muted: #6c757d;
+    --app-border: #dee2e6;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --app-bg: #151a21;
+    --app-surface: #222831;
+    --app-text: #e9ecef;
+    --app-muted: #adb5bd;
+    --app-border: #495057;
+}
+
+html, body {
+    background-color: var(--app-bg) !important;
+    color: var(--app-text) !important;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+html[data-theme="dark"] .bg-light,
+html[data-theme="dark"] .bg-white {
+    background-color: var(--app-surface) !important;
+    color: var(--app-text) !important;
+}
+
+html[data-theme="dark"] .table {
+    --bs-table-bg: var(--app-surface);
+    --bs-table-color: var(--app-text);
+    --bs-table-border-color: var(--app-border);
+    --bs-table-striped-bg: #2b3440;
+    --bs-table-hover-bg: #35404d;
+}
+
+html[data-theme="dark"] .alert,
+html[data-theme="dark"] .btn-close {
+    color: var(--app-text);
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .accordion *,
+html[data-theme="dark"] .kanban-board,
+html[data-theme="dark"] .kanban-board *,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .dropdown-menu,
+html[data-theme="dark"] .list-group-item,
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select,
+html[data-theme="dark"] .input-group-text {
+    background-color: var(--app-surface);
+    color: var(--app-text);
+    border-color: var(--app-border);
+}
+
+html[data-theme="dark"] .text-muted,
+html[data-theme="dark"] .form-text {
+    color: var(--app-muted) !important;
+}
+
+html[data-theme="dark"] .dropdown-item {
+    color: var(--app-text);
+}
+
+html[data-theme="dark"] .dropdown-item:hover,
+html[data-theme="dark"] .dropdown-item:focus {
+    background: #343a40;
+    color: #fff;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+    border: 1px solid var(--app-border);
+    border-radius: 999px;
+    background: var(--app-surface);
+    color: var(--app-text);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.15rem;
+}

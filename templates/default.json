@@ -1,0 +1,23 @@
+{
+  "title": "Quadro Padrão",
+  "columns": [
+    { "id": "backlog", "title": "Backlog", "color": "#0d6efd" },
+    { "id": "desenvolvimento", "title": "Em Desenvolvimento", "color": "#ffc107" },
+    { "id": "testes", "title": "Testes", "color": "#198754" },
+    { "id": "concluido", "title": "Concluído", "color": "#6c757d" }
+  ],
+  "tasks": {
+    "backlog": [
+      { 
+        "id": "t101", 
+        "text": "Exemplo: Definir Escopo do Projeto",
+        "description": "Utilize o modal (clique no card) para adicionar uma descrição detalhada.",
+        "priority": "alta",
+        "due_date": null 
+      }
+    ],
+    "desenvolvimento": [],
+    "testes": [],
+    "concluido": []
+  }
+}

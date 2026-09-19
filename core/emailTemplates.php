@@ -1,0 +1,13 @@
+<?php
+function confirmation_email_body(string $name, string $link): string
+{
+    $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+    $safeLink = htmlspecialchars($link, ENT_QUOTES, 'UTF-8');
+    return "<!doctype html><html><body style=\"margin:0;background:#f4f7fb;font-family:Arial,sans-serif;color:#263238\"><div style=\"max-width:600px;margin:32px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)\"><div style=\"background:#0d6efd;padding:28px;text-align:center;color:#fff\"><h1 style=\"margin:0;font-size:24px\">Confirme seu cadastro</h1></div><div style=\"padding:32px;line-height:1.6\"><p>Olá, <strong>{$safeName}</strong>!</p><p>Obrigado por se cadastrar. Confirme seu e-mail para ativar sua conta. Este link expira em <strong>24 horas</strong>.</p><p style=\"text-align:center;margin:32px 0\"><a href=\"{$safeLink}\" style=\"display:inline-block;background:#0d6efd;color:#fff;text-decoration:none;padding:14px 26px;border-radius:8px;font-weight:bold\">Confirmar e-mail</a></p><p style=\"font-size:13px;color:#667085\">Se o botão não funcionar, copie este endereço:</p><p style=\"font-size:12px;word-break:break-all\"><a href=\"{$safeLink}\">{$safeLink}</a></p></div><div style=\"padding:18px 32px;background:#f8f9fa;text-align:center;color:#667085;font-size:12px\">Mensagem automática do KanbanApp.</div></div></body></html>";
+}
+
+function password_reset_email_body(string $link): string
+{
+    $safeLink = htmlspecialchars($link, ENT_QUOTES, 'UTF-8');
+    return "<!doctype html><html><body style=\"margin:0;background:#f4f7fb;font-family:Arial,sans-serif;color:#263238\"><div style=\"max-width:600px;margin:32px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)\"><div style=\"background:#6f42c1;padding:28px;text-align:center;color:#fff\"><h1 style=\"margin:0;font-size:24px\">Redefinição de senha</h1></div><div style=\"padding:32px;line-height:1.6\"><p>Você solicitou a redefinição da senha do KanbanApp.</p><p>Use o botão abaixo. Este link expira em <strong>1 hora</strong>.</p><p style=\"text-align:center;margin:32px 0\"><a href=\"{$safeLink}\" style=\"display:inline-block;background:#6f42c1;color:#fff;text-decoration:none;padding:14px 26px;border-radius:8px;font-weight:bold\">Redefinir senha</a></p><p style=\"font-size:13px;color:#667085\">Se o botão não funcionar, copie este endereço:</p><p style=\"font-size:12px;word-break:break-all\"><a href=\"{$safeLink}\">{$safeLink}</a></p></div><div style=\"padding:18px 32px;background:#f8f9fa;text-align:center;color:#667085;font-size:12px\">Se você não solicitou a alteração, ignore esta mensagem.</div></div></body></html>";
+}

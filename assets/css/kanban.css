@@ -1,0 +1,171 @@
+/* assets/css/kanban.css */
+
+body {
+    background: #f2f3f5;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 15px;
+    background: white;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.kanban-column {
+    background: white;
+    border-top: 5px solid var(--column-border-color, #ccc);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 450px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.kanban-title {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.kanban-card {
+    background: #ffffff;
+    border-left: 5px solid;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 5px solid var(--card-border-color, #0d6efd); /* Permite cor dinâmica */
+}
+
+/* Prioridades - Altera a borda esquerda do card */
+.kanban-card.priority-baixa {
+    border-left-color: #17a2b8; /* Azul Claro (Info) */
+}
+
+.kanban-card.priority-media {
+    border-left-color: #ffc107; /* Amarelo (Warning) */
+}
+
+.kanban-card.priority-alta {
+    border-left-color: #dc3545; /* Vermelho (Danger) */
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3); /* Destaque leve */
+}
+.kanban-card .card-text-title {
+    font-weight: 500;
+}
+
+/* Novo estilo para o texto editável */
+.kanban-card .card-text-editable {
+    min-height: 20px; /* Garante área de clique mesmo se estiver vazio */
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos de Indicadores de Data de Vencimento */
+.kanban-card.due-today {
+    background-color: #fff3cd; /* Fundo amarelo claro (Alerta) */
+    border-left-color: #ffc107 !important;
+}
+
+.kanban-card.due-expired {
+    background-color: #f8d7da; /* Fundo vermelho claro (Perigo) */
+    border-left-color: #dc3545 !important;
+    opacity: 0.8;
+}
+
+.kanban-card .card-text-title .bi {
+    margin-left: 5px;
+}
+
+/* Foco na edição */
+.kanban-card .card-text-editable:focus {
+    background: #fffbe6;
+    border-radius: 4px;
+    padding: 2px;
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5); /* Sombra de aviso amarela */
+}
+
+.kanban-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.drag-over {
+    background: #e3f2fd;
+    border: 2px dashed #0d6efd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .kanban-board {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .kanban-column {
+        min-width: 80%;
+        max-width: 80%;
+    }
+}
+
+/* --- Tema Escuro (Dark Mode) --- */
+body.dark .kanban-board {
+    background: #2a2a2a;
+    border-color: #444 !important;
+}
+
+body.dark .kanban-column {
+    background: #2d2d2d;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body.dark .kanban-card {
+    background: #3d3d3d;
+    color: #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+body.dark .kanban-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.dark .kanban-card.due-today {
+    background-color: #4f3b00; /* Fundo amarelo/laranja escuro */
+    color: #ffe69c;
+}
+
+body.dark .kanban-card.due-expired {
+    background-color: #4a1515; /* Fundo vermelho escuro */
+    color: #f8d7da;
+}
+
+body.dark .kanban-card .text-muted,
+body.dark .kanban-card .bi-card-text {
+    color: #bbb !important;
+}
+
+body.dark .drag-over {
+    background: #1a2a3a;
+    border-color: #0d6efd;
+}
+
+
+/* Tarefas concluídas */
+.kanban-card.completed {
+    background: #d1e7dd;
+    border-left-color: #198754 !important;
+    color: #0f5132;
+}
+
+.kanban-card.completed .card-text-title {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+}
+
+body.dark .kanban-card.completed {
+    background: #143d2b;
+    border-left-color: #75b798 !important;
+    color: #d1e7dd;
+}
