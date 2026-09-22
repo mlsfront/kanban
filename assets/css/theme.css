@@ -5,6 +5,25 @@
     --app-text: #212529;
     --app-muted: #6c757d;
     --app-border: #dee2e6;
+    --app-border-strong: #adb5bd;
+    --app-placeholder: #6c757d;
+    --app-focus: #ffc107;
+    --priority-low: #17a2b8;
+    --priority-medium: #ffc107;
+    --priority-high: #dc3545;
+    --kanban-completed-border: #198754;
+    --kanban-board-bg: var(--app-surface);
+    --kanban-column-bg: var(--app-surface);
+    --kanban-card-bg: var(--app-surface);
+    --kanban-card-border: #0d6efd;
+    --kanban-due-today-bg: #fff3cd;
+    --kanban-due-today-text: #664d03;
+    --kanban-due-expired-bg: #f8d7da;
+    --kanban-due-expired-text: #842029;
+    --kanban-completed-bg: #d1e7dd;
+    --kanban-completed-text: #0f5132;
+    --kanban-drag-bg: #e3f2fd;
+    --kanban-shadow: rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme="dark"] {
@@ -13,7 +32,26 @@ html[data-theme="dark"] {
     --app-surface: #222831;
     --app-text: #e9ecef;
     --app-muted: #adb5bd;
-    --app-border: #495057;
+    --app-border: #596575;
+    --app-border-strong: #8793a1;
+    --app-placeholder: #b8c2ce;
+    --app-focus: #ffd166;
+    --priority-low: #66d9ef;
+    --priority-medium: #ffd166;
+    --priority-high: #ff6b7a;
+    --kanban-completed-border: #75b798;
+    --kanban-board-bg: #1b222c;
+    --kanban-column-bg: #242d38;
+    --kanban-card-bg: #2e3946;
+    --kanban-card-border: #66b3ff;
+    --kanban-due-today-bg: #4f3b00;
+    --kanban-due-today-text: #ffe69c;
+    --kanban-due-expired-bg: #4a1515;
+    --kanban-due-expired-text: #f8d7da;
+    --kanban-completed-bg: #143d2b;
+    --kanban-completed-text: #d1e7dd;
+    --kanban-drag-bg: #1a2a3a;
+    --kanban-shadow: rgba(0, 0, 0, 0.3);
 }
 
 html, body {
@@ -44,7 +82,6 @@ html[data-theme="dark"] .btn-close {
 html[data-theme="dark"] .card,
 html[data-theme="dark"] .accordion *,
 html[data-theme="dark"] .kanban-board,
-html[data-theme="dark"] .kanban-board *,
 html[data-theme="dark"] .modal-content,
 html[data-theme="dark"] .dropdown-menu,
 html[data-theme="dark"] .list-group-item,
@@ -59,6 +96,17 @@ html[data-theme="dark"] .input-group-text {
 html[data-theme="dark"] .text-muted,
 html[data-theme="dark"] .form-text {
     color: var(--app-muted) !important;
+}
+
+::placeholder {
+    color: var(--app-placeholder) !important;
+    opacity: 1;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+    border-color: var(--app-border-strong);
 }
 
 html[data-theme="dark"] .dropdown-item {
